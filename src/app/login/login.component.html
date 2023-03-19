@@ -1,0 +1,23 @@
+<form #form="ngForm">
+    <div>
+        <h1>Login</h1>
+    </div>
+    <div>
+        <input class="form-control m-2" type="email" placeholder="Email Id" #email="ngModel" email="true" name="Email"
+            [(ngModel)]="data.email" required />
+        <!-- <p>{{data.email}}</p> -->
+        <p style="color: red;" *ngIf="email.touched && (email.errors?.['required'] || email.invalid) email ">Please
+            Enter Your Valid Email address*</p>
+    </div>
+    <div>
+        <input class="form-control m-2" type="text" placeholder="Password" name="Password" #password="ngModel"
+            [(ngModel)]="data.password" minlength="8" maxlength="12" required />
+        <p style="color: red;" *ngIf="password.touched && (password.invalid || password.errors?.['required'])">Please
+            Enter Your Valid Password*</p>
+    </div>
+    <div>
+        <button [routerLink]="['/list']" class="btn btn-primary m-2" [disabled]="form.invalid">Login</button>
+    </div>
+</form>
+
+<router-outlet></router-outlet>
