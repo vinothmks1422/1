@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InputComponent } from './input/input.component';
-import { ListComponent } from './list/list.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   {
@@ -10,13 +10,17 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'input',
-    component: InputComponent
+    path: 'users',
+    component: UserComponent
   },
   {
-    path: 'list',
-    component: ListComponent
+    path: 'users/new',
+    component: CreateUserComponent
   },
+  // {
+  //   path: 'new/user' ,
+  //   component: UserComponent
+  // },
   {
     path: '**',
     redirectTo: '/login'

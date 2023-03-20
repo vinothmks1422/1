@@ -10,9 +10,9 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
-
-  data = { email: "" , password : ''}
+  data = { email: "", password: '' }
 
 }

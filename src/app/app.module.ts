@@ -5,22 +5,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { ListComponent } from './list/list.component';
-import { InputComponent } from './input/input.component';
-import { BoxComponent } from './box/box.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ListComponent,
-    InputComponent,
-    BoxComponent,
+    CreateUserComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

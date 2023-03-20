@@ -1,0 +1,31 @@
+<!-- <div>
+  <input class="form-control" type="text" placeholder="Name">
+  <button routerLink="/users" class="btn btn-primary m-2">Add</button>
+</div> -->
+
+<div>
+  <input class="form-control" type="text" placeholder="Text" [(ngModel)]="userName" />
+  <button class="btn btn-success m-2" (click)="addUser()" routerLink="/users">Add User</button>
+</div>
+
+<!-- <div>
+  <li *ngFor="let x of userNameCollection">
+    {{x}}
+  </li>
+</div> -->
+
+
+
+
+<!-- 
+    1. routing changes 
+      - login
+      - users
+      - users/new
+
+    2. component name changes 
+        - users
+        - createuser
+
+        
+ -->
