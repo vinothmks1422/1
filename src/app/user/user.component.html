@@ -1,10 +1,10 @@
 <div>
     <a routerLink="/users/new" class="btn btn-primary">Add list</a>
 </div>
-{{x}}
+<!-- {{x}} -->
 <ul>
     <!-- <li>{{x}}</li> -->
-    <li *ngFor="let item of getName; let i = index">
+    <li *ngFor="let item of fetchedText; let i = index">
         <label>{{item}}</label>
         <button class="btn btn-primary m-2" (click)="deleteUser(i)">Delete User</button>
     </li>

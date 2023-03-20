@@ -21,9 +21,8 @@ export class CreateUserComponent implements OnInit {
   addUser() {
     if (this.userName !== "") {
       this.userNameCollection.push(this.userName);
+      localStorage.setItem('userNames', JSON.stringify([...JSON.parse(localStorage.getItem('userNames') || '[]'), this.userName.valueOf()]));
     }
-    localStorage.setItem('userNames', this.userNameCollection);
-    // console.log(localStorage.getItem('userNames'));
   }
 
 

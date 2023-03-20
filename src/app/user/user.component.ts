@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { findIndex } from 'rxjs';
 
 @Component({
   selector: 'app-user',
@@ -13,19 +14,15 @@ export class UserComponent implements OnInit {
   }
 
 
-  getName: any = localStorage.getItem('userNames')?.split(' ')
+  getName: any = localStorage.getItem('userNames');
 
-  // getNameColl : Array<string> = [];
+  fetchedText: any = JSON.parse(this.getName);
 
-  // y = this.getNameColl.push(this.getName);
-  
 
-  x = localStorage.length;
+  // x = localStorage.length;
 
   deleteUser(index: number) {
     // diffrent ways to remove element from array
-    this.getName.splice(index, 1);
-    console.log(this.getName);
-    
+    this.fetchedText.splice(index, 1);
   }
 }
