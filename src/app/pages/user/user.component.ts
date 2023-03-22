@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { findIndex } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -8,21 +9,25 @@ import { findIndex } from 'rxjs';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   ngOnInit(): void {
   }
 
+  getUsers() {
+
+  }
+
 
   getName: any = localStorage.getItem('userNames');
-
-  fetchedText: any = JSON.parse(this.getName);
-
+  users: string[] = JSON.parse(this.getName);
 
   // x = localStorage.length;
 
   deleteUser(index: number) {
     // diffrent ways to remove element from array
-    this.fetchedText.splice(index, 1);
+    this.users.splice(index, 1);
   }
 }

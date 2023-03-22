@@ -1,0 +1,39 @@
+<!-- {{x}} -->
+<!-- <ul>
+    <li>{{x}}</li>
+    <li *ngFor="let item of fetchedText; let i = index">
+        <label>{{item}}</label>
+        <button class="btn btn-primary m-2" (click)="deleteUser(i)">Delete User</button>
+    </li>
+</ul> -->
+
+<div class="create_user">
+    <nav class="navbar bg-primary p-2">
+        <div class="container-fluid">
+            <h1 class="navbar-brand text-white fs-1">User Details</h1>
+            <div class="d-flex">
+                <a routerLink="/users/new" class="btn btn-dark m-2">Add Users</a>
+                <button [routerLink]="['/login']" class="btn btn-dark m-2">Logout</button>
+            </div>
+        </div>
+    </nav>
+    <table class="table table-bordered table-striped table-hover">
+        <thead class="bg-success text-white">
+            <tr>
+                <th>S.No.</th>
+                <th>User name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of users; let i = index">
+                <td>{{i+1}}</td>
+                <td class="m-2">{{item}}</td>
+                <td>
+                    <button class="btn btn-light" (click)="deleteUser(i)"><i class="bi bi-trash-fill"></i></button>
+                    <button class="btn btn-light"><i class="bi bi-pencil-fill"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

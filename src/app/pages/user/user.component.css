@@ -1,0 +1,15 @@
+.create_user {
+    /* background-color: rgb(180, 236, 236); */
+    height: 100vh;
+    width: 100vw;
+}
+
+table {
+    margin: auto;
+    width: 40%;
+    text-align: center;
+}
+
+/* div a {
+    margin: auto;
+} */
